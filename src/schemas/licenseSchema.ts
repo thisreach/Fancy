@@ -5,7 +5,6 @@ interface ILicense extends Document {
     plugin: string;
     license: string;
     enderess: string;
-    activated: boolean;
 }
 
 const licenseSchema = new Schema<ILicense>({
@@ -13,7 +12,6 @@ const licenseSchema = new Schema<ILicense>({
     plugin: { type: String, required: true},
     license: { type: String, require: true },
     enderess: { type: String, require: true },
-    activated: Boolean
 })
 
 export default model<ILicense>("License", licenseSchema);

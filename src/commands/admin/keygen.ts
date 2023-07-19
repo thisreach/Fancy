@@ -1,4 +1,4 @@
-import { ApplicationCommandOptionType, ApplicationCommandType, Colors, EmbedBuilder } from "discord.js";
+import { ApplicationCommandOptionType, ApplicationCommandType, Colors, EmbedBuilder, PermissionFlagsBits } from "discord.js";
 import { Command } from "../../structs/types/Commands";
 import { v4 as uuidv4 } from 'uuid';
 import License from "../../schemas/licenseSchema";
@@ -7,6 +7,7 @@ export default new Command({
     name: 'keygen',
     description: 'Gerar uma licença.',
     type: ApplicationCommandType.ChatInput,
+    defaultMemberPermissions: PermissionFlagsBits.Administrator,
     options: [
         {
             name: 'usuário',

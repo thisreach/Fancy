@@ -1,4 +1,4 @@
-import { PermissionsBitField } from "discord.js";
+import { EmbedBuilder, PermissionsBitField } from "discord.js";
 import { Event } from "../../structs/types/Event";
 
 export default new Event({
